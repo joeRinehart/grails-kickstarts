@@ -14,8 +14,8 @@ import org.yaml.snakeyaml.Yaml
 class EnvironmentPropertiesCheck extends AbstractNonProductionConfigurationCheck {
 
     void execute() {
-        File environmentFile = new File('./grails-app/conf/environment.yml')
-        File templateFile = new File('./grails-app/conf/environment.yml.template')
+        File environmentFile = new File('./grails-app/conf/environment/environment.yml')
+        File templateFile = new File('./grails-app/conf/environment/environment.yml.template')
 
         log.info("Starting a check for an environment.yml file at ${environmentFile.canonicalPath}")
 

@@ -5,7 +5,6 @@ package com.thirdstart.grails.kickstart
  */
 class AbstractApplicationController {
 
-
     Map getDefaultModel() {
         return [:]
     }

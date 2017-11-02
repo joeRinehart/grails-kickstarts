@@ -7,6 +7,9 @@ buildscript {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
         classpath "org.grails.plugins:hibernate5:${gormVersion-".RELEASE"}"
         classpath "com.bertramlabs.plugins:asset-pipeline-gradle:2.14.2"
+        classpath "org.grails.plugins:database-migration:3.0.3"
+        classpath "org.liquibase:liquibase-core:3.5.3"
+
     }
 }
 
@@ -58,9 +61,6 @@ dependencies {
     testRuntime "org.seleniumhq.selenium:selenium-htmlunit-driver:2.47.1"
     testRuntime "net.sourceforge.htmlunit:htmlunit:2.18"
 
-    // Allow use of external configurations, like Grails 2.x
-    compile 'org.grails.plugins:external-config:1.1.2'
-
     // Database. You'll need to change this to suit yours!
 
     /*
@@ -77,8 +77,9 @@ dependencies {
      */
     runtime "com.microsoft.sqlserver:mssql-jdbc:6.1.0.jre8"
 
-    // SASS compiler for Bootstrap
-    compile 'com.bertramlabs.plugins:sass-asset-pipeline:2.14.3'
+    // Database migrations
+    compile 'org.grails.plugins:database-migration:3.0.3'
+    compile 'org.liquibase:liquibase-core:3.5.3'
 }
 
 bootRun {
@@ -90,4 +91,17 @@ bootRun {
 assets {
     minifyJs = true
     minifyCss = true
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDir 'grails-app/migrations'
+        }
+    }
+}
+
+// see https://blog.jdriven.com/2015/10/grails-goodness-use-different-external-configuration-files/
+tasks.withType(JavaExec).each { task ->
+    task.systemProperties System.properties
 }

@@ -122,21 +122,3 @@ environments:
                 jdbcInterceptors: ConnectionState
                 defaultTransactionIsolation: 2 # TRANSACTION_READ_COMMITTED
 
----
-# External configuration files
-environments:
-    development:
-        grails:
-            config:
-                locations:
-                    - classpath:environment.yml
-    test:
-        grails:
-            config:
-                locations:
-                    - classpath:environment.yml
-    production:
-        grails:
-            config:
-                locations:
-                    - file:///etc/grails-bootstrap-kickstart/environment.yml

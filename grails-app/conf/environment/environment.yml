@@ -4,3 +4,7 @@ dataSource:
   url: jdbc:sqlserver://192.168.255.152;databaseName=grails-bootstrap-quickstart
   username: grails-bootstrap-quickstart
   password: password
+
+
+externalConfigStuff:
+  foo: outsideBar

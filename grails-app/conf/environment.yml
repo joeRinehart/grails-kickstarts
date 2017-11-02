@@ -1,0 +1,6 @@
+dataSource:
+  driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  dialect: org.hibernate.dialect.SQLServer2008Dialect
+  url: jdbc:sqlserver://192.168.255.152;databaseName=grails-bootstrap-quickstart
+  username: grails-bootstrap-quickstart
+  password: password

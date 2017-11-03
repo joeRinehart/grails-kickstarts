@@ -1,5 +1,7 @@
 package spring
 
+import com.thirdstart.grails.kickstart.security.ApplicationUserPasswordEncoderListener
+
 import com.thirdstart.grails.kickstart.environment.nonproduction.EnvironmentPropertiesCheck
 import com.thirdstart.grails.kickstart.environment.ConfigurationChecker
 
@@ -27,4 +29,9 @@ beans = {
 
     /* A Groovy Sql instance tied to the datasource: because it's just plain handy and fast. */
     sql(Sql, ref('dataSource')){}
+
+
+    // SPRING SECURITY
+    applicationUserPasswordEncoderListener(ApplicationUserPasswordEncoderListener, ref('hibernateDatastore'))
+
 }

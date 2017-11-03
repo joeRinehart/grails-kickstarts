@@ -1,9 +1,7 @@
 dataSource:
-  driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
-  url: jdbc:sqlserver://192.168.255.152;databaseName=grails-bootstrap-quickstart
-  username: grails-bootstrap-quickstart
+  driverClassName: org.postgresql.Driver
+  url: jdbc:postgresql://localhost:5432/grails-bootstrap-quickstart
+  username: joe
   password: password
-
-
 externalConfigStuff:
   foo: outsideBar

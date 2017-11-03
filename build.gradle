@@ -70,12 +70,25 @@ dependencies {
 
     dataSource:
       driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
-      dialect: org.hibernate.dialect.SQLServer2008Dialect
       url: jdbc:sqlserver://localhost;databaseName=grails-bootstrap-quickstart
       username: grails-bootstrap-quickstart
       password: password
      */
     runtime "com.microsoft.sqlserver:mssql-jdbc:6.1.0.jre8"
+
+    /*
+    Postgresql
+
+    Add the following to your environment.yml.template:
+
+    dataSource:
+      driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      url: jdbc:sqlserver://localhost;databaseName=grails-bootstrap-quickstart
+      username: grails-bootstrap-quickstart
+      password: password
+     */
+    runtime "postgresql:postgresql:9.4.1208-jdbc42-atlassian-hosted"
+
 
     // Database migrations
     compile 'org.grails.plugins:database-migration:3.0.3'

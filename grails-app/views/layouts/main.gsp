@@ -14,6 +14,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
     <asset:stylesheet src="global-manifest.css" />
 
     <g:layoutHead/>
@@ -29,6 +32,12 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <g:link class="nav-link" url="/">Home</g:link>
+                </li>
+                <li class="nav-item">
+                    <g:link class="nav-link" url="/page/bootplate">Bootplate</g:link>
+                </li>
+                <li class="nav-item">
+                    <g:link class="nav-link" url="/page/javascripts">JavaScript</g:link>
                 </li>
                 <li class="nav-item">
                     <g:link class="nav-link" url="/page/about">About</g:link>

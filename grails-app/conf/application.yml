@@ -122,3 +122,8 @@ environments:
                 jdbcInterceptors: ConnectionState
                 defaultTransactionIsolation: 2 # TRANSACTION_READ_COMMITTED
 
+---
+bootplate:
+    form:
+        labelColClass: col-md-3
+        controlColClass: col-md-9

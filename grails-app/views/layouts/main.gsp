@@ -37,6 +37,9 @@
                     <g:link class="nav-link" url="/page/bootplate">Bootplate</g:link>
                 </li>
                 <li class="nav-item">
+                    <g:link class="nav-link" url="/page/javascripts">JavaScript</g:link>
+                </li>
+                <li class="nav-item">
                     <g:link class="nav-link" url="/page/about">About</g:link>
                 </li>
                 <li class="nav-item">

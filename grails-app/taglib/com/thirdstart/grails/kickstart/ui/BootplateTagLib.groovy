@@ -29,7 +29,7 @@ class BootplateTagLib {
         attrs.dismissable = attrs.dismissable == null ? false : attrs.dismissable.toString().toBoolean()
 
         out << """
-            <div ${ifTruthy(attrs.id, "id=\"${attrs.id}\"")} class="alert alert-${safely(attrs.intent)} ${ifTruthy(attrs.dismissable, 'alert-dismissible')} ${ifTruthy(attrs['class'])}" role="alert">
+            <div ${ifTruthy(attrs.id, "id=\"${attrs.id}\"", false)} class="alert alert-${safely(attrs.intent)} ${ifTruthy(attrs.dismissable, 'alert-dismissible')} ${ifTruthy(attrs['class'])}" role="alert">
         """
 
         if (attrs.heading) {

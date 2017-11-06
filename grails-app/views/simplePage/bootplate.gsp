@@ -89,7 +89,7 @@
     <h1>What it Simplifies</h1>
 
     <a class="anchor" name="forms"></a>
-    <h3>Forms</h3>
+    <h2>Forms</h2>
 
     <p>Bootstrap's form classes are great, and we love the ability to use the full-on grid system in a form-row, but for
     the majority of form inputs we just want a simple label/input combination that collapses the wrapper div's, label's,

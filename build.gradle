@@ -96,6 +96,13 @@ dependencies {
 
     // Spring Security
     compile 'org.grails.plugins:spring-security-core:3.2.0.M1'
+
+    // OAuth and its social plugins
+    // seealso:
+    // https://github.com/MatrixCrawler/grails-spring-security-oauth2
+    compile 'org.grails.plugins:spring-security-oauth2:1.1.0'
+    compile 'org.grails.plugins:spring-security-oauth2-google:1.1.+'
+    compile 'org.grails.plugins:spring-security-oauth2-facebook:1.0.0'
 }
 
 bootRun {

@@ -4,4 +4,17 @@ dataSource:
   username: grails-bootstrap-quickstart
   password: password
 
-
+# from:
+# https://github.com/MatrixCrawler/grails-spring-security-oauth2
+# https://github.com/MatrixCrawler/grails-spring-security-oauth2-google
+grails:
+    plugin:
+        springsecurity:
+            oauth2:
+                providers:
+                    google:
+                        api_key: 'google-api-key'               #needed
+                        api_secret: 'google-api-secret'         #needed
+                    facebook:
+                        api_key: 'facebook-api-key'               #needed
+                        api_secret: 'facebook-api-secret'         #needed

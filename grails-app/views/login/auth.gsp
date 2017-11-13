@@ -21,7 +21,7 @@
                 <bp:alert intent="danger">We're sorry, that wasn't quite right. Please try again.</bp:alert>
             </g:if>
             <hr />
-            <g:form controller="login" action="authenticate" autocomplete="off" name="login-form">
+            <g:form controller="login" action="authenticate" autocomplete="off" name="login-form" useToken="true">
                 <bp:field label="Username">
                     <input type="text" class="form-control" name="username" id="login-username" autofocus />
                 </bp:field>

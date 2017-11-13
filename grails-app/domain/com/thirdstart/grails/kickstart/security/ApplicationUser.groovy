@@ -11,6 +11,8 @@ class ApplicationUser implements Serializable {
 
 	private static final long serialVersionUID = 1
 
+	static hasMany = [oAuthIDs: ApplicationOAuthToken]
+
 	String username
 	String password
 	boolean enabled = true

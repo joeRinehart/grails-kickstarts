@@ -304,8 +304,6 @@ class BootplateTagLib {
 
         parentTabData.tabs << attrs
 
-        println "Hey: ${attrs['class']}, ${isTruthy(attrs['class'])}, ${ifTruthy(attrs['class'])}"
-
         out << """
             <div class="tab-pane ${ifTruthy(attrs.active, 'show active')} ${ifTruthy(attrs['class'])}" id="${safely(attrs.id)}" role="tabpanel" aria-labelledby="home-${safely(attrs.id)}">
         """

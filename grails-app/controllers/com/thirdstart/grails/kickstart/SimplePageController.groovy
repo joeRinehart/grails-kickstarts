@@ -1,5 +1,8 @@
 package com.thirdstart.grails.kickstart
 
+import grails.plugin.springsecurity.annotation.Secured
+
+@Secured(['ROLE_USER'])
 /**
  * A simple controller that allows you to serve pages that are bare-bones
  * content that just need the application's default model.

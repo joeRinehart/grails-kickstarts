@@ -42,8 +42,9 @@ class EnvironmentPropertiesCheck extends AbstractNonProductionConfigurationCheck
                 Map map = templateParent as Map
                 map.eachWithIndex{ k, v, i ->
                     // If key doesn't exist in target, copy it...
-                    if ( !targetParent[k] ) {
+                    if ( targetParent[k] == null ) {
                         targetParent[k] = v
+                        log.info("  -> new environment key found: ${k}")
                         newKeysFound = true
                     } else {
                         // If it exists, and it's a map, crawl it.

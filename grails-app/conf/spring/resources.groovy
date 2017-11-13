@@ -1,5 +1,7 @@
 package spring
 
+import com.thirdstart.grails.kickstart.environment.global.DefaultRoleCheck
+import com.thirdstart.grails.kickstart.environment.nonproduction.DefaultUserCheck
 import com.thirdstart.grails.kickstart.security.ApplicationUserPasswordEncoderListener
 
 import com.thirdstart.grails.kickstart.environment.nonproduction.EnvironmentPropertiesCheck
@@ -18,10 +20,18 @@ beans = {
         2. Add it to the 'checks' list of the configurationChecker bean
     */
     environmentPropertiesCheck(EnvironmentPropertiesCheck)
+    defaultRoleCheck(DefaultRoleCheck) { bean ->
+        bean.autowire = 'byName'
+    }
+    defaultUserCheck(DefaultUserCheck) { bean ->
+        bean.autowire = 'byName'
+    }
 
     configurationChecker(ConfigurationChecker) {
         checks = [
-                ref('environmentPropertiesCheck')
+            ref('environmentPropertiesCheck'),
+            ref('defaultRoleCheck'),
+            ref('defaultUserCheck')
         ]
     }
 

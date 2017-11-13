@@ -5,3 +5,19 @@ dataSource:
   password: password
 
 
+kickstart:
+  security:
+    roles:
+      - ROLE_ADMIN
+      - ROLE_USER
+    defaultUsers:
+      - username: admin_user
+        password: admin_user
+        roles:
+          - ROLE_ADMIN
+          - ROLE_USER
+      - username: dev_user
+        password: dev_user
+        roles:
+          - ROLE_USER
+

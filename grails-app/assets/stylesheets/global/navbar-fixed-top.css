@@ -3,3 +3,12 @@ body {
     min-height: 75rem;
     padding-top: 4.5rem;
 }
+
+.navbar {
+    color: #ffffff;
+}
+
+.btn-link {
+    padding:0px 0px 0px 5px;
+    cursor: pointer;
+}

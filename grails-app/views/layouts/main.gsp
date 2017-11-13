@@ -46,10 +46,12 @@
                     <a class="nav-link disabled" href="#">Disabled</a>
                 </li>
             </ul>
-            <form class="form-inline mt-2 mt-md-0" onsubmit="return false">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" disabled>
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" disabled>Search</button>
-            </form>
+            <sec:ifLoggedIn>
+                You're logged in as ${currentUser.username}.
+                <g:form controller="logout" action="index">
+                    <button type="submit" class="btn btn-link">Log out</button>.
+                </g:form>
+            </sec:ifLoggedIn>
         </div>
     </nav>
 

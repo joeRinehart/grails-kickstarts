@@ -73,7 +73,15 @@ function BootstrapKickstartUtils() {
 
         return new Promise( function( fulfill, reject ) {
             container.html( content )
+
+            // I've confirmed this is town down as part of modal closing...
+            $('#' + id).on('shown.bs.modal', function(e) {
+                $(e.target).find('.btn-primary').focus()
+            })
+
             var modal = $('#' + id).modal(self.modalOptions)
+
+            console.log("der")
 
             modal.on('hidden.bs.modal', function() {
                 container.remove()
@@ -181,11 +189,11 @@ function BootstrapKickstartUtils() {
         return new Promise( function( fulfill ) {
             container.html( content )
 
-
-            var modal = $('#' + id).modal(self.modalOptions).on('shown.bs.modal', function() {
-                console.log("shown", $('#kickstart-bootstrap-prompt-modal-input'))
+            $('#' + id).on('shown.bs.modal', function() {
                 $('#kickstart-bootstrap-prompt-modal-input').focus()
             })
+
+            var modal = $('#' + id).modal(self.modalOptions)
             var val = null
             var cancelled = false
 

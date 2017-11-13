@@ -153,7 +153,7 @@
     &lt;/bp:field&gt;
 &lt;/form&gt;</pre>
         </bp:tab>
-        <bp:tab id="form-example-strap" label="Raw Bootstrap GSP" class="example-content">
+        <bp:tab id="form-example-strap" label="Raw Bootstrap HTML" class="example-content">
 <pre><code>&lt;form&gt;
     &lt;div class="form-group row"&gt;
         &lt;label for="inputSimpleHorizontal" class="col-md-3 col-form-label"&gt;Something Simple and Responsive&lt;/label&gt;

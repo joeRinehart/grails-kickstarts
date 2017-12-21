@@ -29,23 +29,25 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <g:link class="nav-link" url="/">Home</g:link>
-                </li>
-                <li class="nav-item">
-                    <g:link class="nav-link" url="/page/bootplate">Bootplate</g:link>
-                </li>
-                <li class="nav-item">
-                    <g:link class="nav-link" url="/page/javascripts">JavaScript</g:link>
-                </li>
-                <li class="nav-item">
-                    <g:link class="nav-link" url="/page/about">About</g:link>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-            </ul>
+            <sec:ifLoggedIn>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <g:link class="nav-link" url="/">Home</g:link>
+                    </li>
+                    <li class="nav-item">
+                        <g:link class="nav-link" url="/page/bootplate">Bootplate</g:link>
+                    </li>
+                    <li class="nav-item">
+                        <g:link class="nav-link" url="/page/javascripts">JavaScript</g:link>
+                    </li>
+                    <li class="nav-item">
+                        <g:link class="nav-link" url="/page/about">About</g:link>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+            </sec:ifLoggedIn>
             <sec:ifLoggedIn>
                 You're logged in as ${currentUser.username}.
                 <g:form controller="logout" action="index">
